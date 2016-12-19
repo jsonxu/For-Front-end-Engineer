@@ -343,3 +343,102 @@ gulp.task('script', function() {
 ### （四）、除了雅虎军规，你还知道什么优化方式？
 
 * 答：抱歉，这个我真的不知道。
+
+### （五）、（或者问点实际的）你的项目中是如何实现权限控制的？
+
+* 答： __*（待补充）*__
+
+
+# 六 2016新技术以及框架
+
+### 一、jQuery
+
+#### （一）项目是jQuery开发完成，那是如何解决组件化问题的。
+
+* 答：CommonJS/AMD + 观察者模式。
+
+请参考我的一篇文章：[Web组件开发基础](http://www.jianshu.com/p/85493e155651)
+
+更详细的内容，请参考课程：[阿当大话西游之WEB组件](http://www.imooc.com/learn/99)
+
+#### （二）你读过jQuery源码吗，你读的部分，源码是如何实现的。
+
+* 答：没说的，先去读源码吧。可以先读一下zepto，比较简单。
+
+
+### 二、React
+
+#### （一）React的生命周期
+
+* 答：挂载（Mount） 更新（Update） 卸载（Unmount）以及各自期间的钩子函数，以及钩子函数的执行顺序。
+
+    参考课程：[React入门](http://www.imooc.com/learn/504)
+    
+
+#### （二）Redux原理 （项目中如何解决不同组件通信的）
+
+* 答：Rudex是组件顶层的状态管理器。
+
+    请参考文章：[Redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
+    
+    或者这一篇：[理解 React，但不理解 Redux，该如何通俗易懂的理解 Redux](https://www.zhihu.com/question/41312576)
+    
+    
+#### （三）React优化方式：
+
+* 答：__*（待补充）*__
+
+
+#### （四）问点具体的：
+    
+1. React比jQuery优势在哪？
+2. React实现局部刷新，是用ComponentShouldUpdate这个方法。如果刷新区域比较多，那项目中会存在很多这个方法。你是如何解决要局部刷新需要使用无处不在的ComponentShouldUpdate方法这个问题的。
+
+
+### 三、Node.js
+
+#### （一）如何捕获Node.js中的异步错误？
+
+* 答：具体文章：[nodejs的异步和错误处理](https://cnodejs.org/topic/56aad41a26d02fc6626bb369)
+    
+1. 回调函数
+2. Promise返回错误
+3. async await
+
+
+#### （二）如何使用Node.js进行后端接口合并的？
+
+* 答：我的项目中是使用 Promise 和 async 模块。
+
+```
+exports.initData = (req) => {
+  return new Promise((resolve, reject) => {
+    async.parallel(
+      {
+        permissions: (callback) => {
+          //...        },
+        specialList: (callback) => {
+          //...
+        },
+        trustList: (callback) => {
+          //...
+        }
+      },
+      (err, results) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(results);
+        }
+      })
+  })
+}
+```
+
+###（三）Node.js的基础知识：
+
+* 答：参考课程：[进击Node.js基础（一）](http://www.imooc.com/learn/348)  [进击Node.js基础（二）](http://www.imooc.com/learn/637)
+
+
+# 七 常见网络安全：
+
