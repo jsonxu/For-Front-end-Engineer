@@ -239,22 +239,22 @@ d. document.querySelector()
   
 f. document.querySelectorAll()
 
-// 性能高低排序 ： d > f > b > c > a 
+// 性能高低排序 ： d > f > b > c > a （不太确定）
 ```
 ### （七）、自己实现一个Promise对象，你会怎么做？
 
-* 答：（待补充）
+* 答：介绍的文章也挺多的。Promise遵循Promises/A+规范。文章链接：[教你一步一步实现一个Promise](http://www.tuicool.com/articles/RzQRV3)
 
 ### （八）、ES6中 Set和Map的区别
 
 * 答：
  
-Map : ES6 中两种新的数据结构集：Map 和 WeakMap。事实上每个对象都可以看作是一个 Map。
-      一个对象由多个 key-val 对构成，在 Map 中，任何类型都可以作为对象的 key。
- 
-Set : Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型和引用类型。
-
-参考：[ES6 扫盲](https://github.com/metagrover/ES6-for-humans)
+  Map : ES6 中两种新的数据结构集：Map 和 WeakMap。事实上每个对象都可以看作是一个 Map。
+        一个对象由多个 key-val 对构成，在 Map 中，任何类型都可以作为对象的 key。
+   
+  Set : Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型和引用类型。
+  
+  参考：[ES6 扫盲](https://github.com/metagrover/ES6-for-humans)
 
 
 # 四、HTTP
@@ -363,7 +363,7 @@ gulp.task('script', function() {
 
 #### （二）你读过jQuery源码吗，你读的部分，源码是如何实现的。
 
-* 答：没说的，先去读源码吧。可以先读一下zepto，比较简单。
+* 答：没说的，去读源码吧。可以先读一下zepto，比较简单。
 
 
 ### 二、React
@@ -391,8 +391,8 @@ gulp.task('script', function() {
 
 #### （四）问点具体的：
   
-1. React比jQuery优势在哪？
-2. React实现局部刷新，是用ComponentShouldUpdate这个方法。如果刷新区域比较多，那项目中会存在很多这个方法。你是如何解决要局部刷新需要使用无处不在的ComponentShouldUpdate方法这个问题的。
+1. React比jQuery优势在哪？ __*（待补充）*__
+2. React实现局部刷新，是用ComponentShouldUpdate这个方法。如果刷新区域比较多，那项目中会存在很多这个方法。你是如何解决要局部刷新需要使用无处不在的ComponentShouldUpdate方法这个问题的。 __*（待补充）*__
 
 
 ### 三、Node.js
