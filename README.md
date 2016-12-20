@@ -8,8 +8,8 @@
 ### 常见Meta标签以及含义
     
  * 答：META标签分两大部分：HTTP标题信息(HTTP-EQUIV)和页面描述信息(NAME)。
-    
-        ★HTTP-EQUIV  ： HTTP-EQUIV类似于HTTP的头部协议，它回应给浏览器一些有用的信息，以帮助正确和精确地显示网页内容。常用的HTTP-EQUIV类型有：
+  
+    ★HTTP-EQUIV  ： HTTP-EQUIV类似于HTTP的头部协议，它回应给浏览器一些有用的信息，以帮助正确和精确地显示网页内容。常用的HTTP-EQUIV类型有：
 
 　　1、Content-Type和Content-Language (显示字符集的设定)
 　　说明：设定页面使用的字符集，用以说明主页制作所使用的文字已经语言，浏览器会根据此来调用相应的字符集显示page内容。
@@ -93,7 +93,7 @@
 * 设置style的属性
 
 如何避免重排或者减少重排带来的性能问题。
-    
+  
 * 修改元素的class属性，并且尽可能在DOM树中比较低的节点上
 * 避免在内联样式中设置多重属性
 * 将动画应用在absolute定位或者fixed的元素上
@@ -104,7 +104,7 @@
 
 1. Sass的常见语法
  * 答：参考慕课网的课程吧。挺好的 [Sass入门篇](http://www.imooc.com/learn/311) [Sass进阶篇](http://www.imooc.com/learn/436)
-    
+  
 2. 使用预编译处理有什么好处？（可以使用css完成，为什么使用Sass？）
  * 答：
 
@@ -123,10 +123,10 @@ p.constructor 指？ ： 指向它的构造函数，即 P 。
 p.[[proto]] 指？ ： 指向它的构造函数的原型，即 P.prototype 。
 ```
 参考课程 [zepto设计和源码分析](http://www.imooc.com/learn/745)
-    
+  
 ### （二）、基础知识之继承
 
-    1.请用js实现一个类P，包含成员变量a，成员变量b，成员函数sum，sum输出a与b的和，a，b默认值都为0。实现一个类M，M继承自P，在P的基础上增加成员变量c，成员函数sum变成输出a,b,c的和。
+  1.请用js实现一个类P，包含成员变量a，成员变量b，成员函数sum，sum输出a与b的和，a，b默认值都为0。实现一个类M，M继承自P，在P的基础上增加成员变量c，成员函数sum变成输出a,b,c的和。
 
 * 答
 
@@ -177,33 +177,33 @@ console.log( m.sum() );
 * this指向
 
 ```
-    function F(){this.a=1;}
-    
-    F(); //指向window对象
-    
-    new F(); //指向new出来的对象
+  function F(){this.a=1;}
+  
+  F(); //指向window对象
+  
+  new F(); //指向new出来的对象
 ```
-    
+  
 * 改变this指向
 
-    原生js的方法 bind call apply方法。
-    
-    Es6中的 => 函数中，this的指向不会改变。
-    
+  原生js的方法 bind call apply方法。
+  
+  Es6中的 => 函数中，this的指向不会改变。
+  
 ### （四）、基础知识之setTimeout
 
 * 下列代码会输出什么？
-    
+  
 ```
 for (var i = 0; i < 3; ++i) {
     function(i){
-        setTimeout(function(){
-            console.log(i);     
-        }, 0);
+      setTimeout(function(){
+          console.log(i);   
+      }, 0);
     } 
 }
-    
-    
+  
+  
 //输出 333
 //因为setTimeout是异步执行，同时限制条件是 ++i，不是i++。
 ```
@@ -217,9 +217,9 @@ for (var i = 0; i < 3; ++i) {
 ```
 for (var i = 0; i < 3; ++i) {
     (function(i){
-        setTimeout(function(){
-            console.log(i);
-        }, 0);
+      setTimeout(function(){
+          console.log(i);
+      }, 0);
     })(i) 
 }
 ```
@@ -230,13 +230,13 @@ for (var i = 0; i < 3; ++i) {
  
 ```
 a. document.getElementById()
-    
+  
 b. document.getElementsByClassName()
-    
+  
 c. document.getElementsByTagName()
-    
+  
 d. document.querySelector()
-    
+  
 f. document.querySelectorAll()
 
 // 性能高低排序 ： d > f > b > c > a 
@@ -318,13 +318,13 @@ Set : Set 对象是一组不重复的值，重复的值将被忽略，值类型�
 ```
 gulp.task('script', function() {
 
-    // 1. 找到文件
-    gulp.src('js/*.js')
-    // 2. 压缩文件
-        .pipe(uglify())
-    // 3. 另存压缩后的文件
-        .pipe(gulp.dest('dist/js'))
-        
+  // 1. 找到文件
+  gulp.src('js/*.js')
+  // 2. 压缩文件
+    .pipe(uglify())
+  // 3. 另存压缩后的文件
+    .pipe(gulp.dest('dist/js'))
+    
 })
 ```
 
@@ -372,25 +372,25 @@ gulp.task('script', function() {
 
 * 答：挂载（Mount） 更新（Update） 卸载（Unmount）以及各自期间的钩子函数，以及钩子函数的执行顺序。
 
-    参考课程：[React入门](http://www.imooc.com/learn/504)
-    
+  参考课程：[React入门](http://www.imooc.com/learn/504)
+  
 
 #### （二）Redux原理 （项目中如何解决不同组件通信的）
 
 * 答：Rudex是组件顶层的状态管理器。
 
-    请参考文章：[Redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
-    
-    或者这一篇：[理解 React，但不理解 Redux，该如何通俗易懂的理解 Redux](https://www.zhihu.com/question/41312576)
-    
-    
+  请参考文章：[Redux 入门教程](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)
+  
+  或者这一篇：[理解 React，但不理解 Redux，该如何通俗易懂的理解 Redux](https://www.zhihu.com/question/41312576)
+  
+  
 #### （三）React优化方式：
 
 * 答：__*（待补充）*__
 
 
 #### （四）问点具体的：
-    
+  
 1. React比jQuery优势在哪？
 2. React实现局部刷新，是用ComponentShouldUpdate这个方法。如果刷新区域比较多，那项目中会存在很多这个方法。你是如何解决要局部刷新需要使用无处不在的ComponentShouldUpdate方法这个问题的。
 
@@ -400,7 +400,7 @@ gulp.task('script', function() {
 #### （一）如何捕获Node.js中的异步错误？
 
 * 答：具体文章：[nodejs的异步和错误处理](https://cnodejs.org/topic/56aad41a26d02fc6626bb369)
-    
+  
 1. 回调函数
 2. Promise返回错误
 3. async await
@@ -416,7 +416,8 @@ exports.initData = (req) => {
     async.parallel(
       {
         permissions: (callback) => {
-          //...        },
+          //...       
+        },
         specialList: (callback) => {
           //...
         },
@@ -440,5 +441,115 @@ exports.initData = (req) => {
 * 答：参考课程：[进击Node.js基础（一）](http://www.imooc.com/learn/348)  [进击Node.js基础（二）](http://www.imooc.com/learn/637)
 
 
-# 七 常见网络安全：
+# 七 常见网络安全（推荐一本书：《web前端黑客技术揭秘》）
+
+#### （一）你了解常见的网络攻击吗？
+（相关文章太多了）
+
+答：
+
+* DDos：利用合法的请求大量占用服务器资源导致服务器瘫痪。
+2. XSS：想尽一切办法在目标网站上执行你的恶意脚本，可以设置httpOnly来使客户端脚本无法读写cookie，这样可以有效防止XSS获取cookie。
+3. CSRF：即跨站请求伪造。发送模拟请求来执行恶意意图。
+
+#### （二）cookie安全机制
+答：
+
+* 设置cookie过期时间
+2. httpOnly机制。
+
+#### （三）cookie和session有什么区别
+
+答：
+
+* cookie数据存放在客户的浏览器上，session数据放在服务器上。
+* cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗考虑到安全应当使用session。
+* session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用COOKIE。
+* 单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
+* 所以个人建议：
+   将登陆信息等重要信息存放为SESSION
+   其他信息如果需要保留，可以放在COOKIE中
+
+#### （四）跨域
+
+1. 跨域的常见方式
+2. JSHOP原理
+3. 从技术角度解释一下跨域的隐患。
+
+对于以上三个问题，参见文章：[浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html) 以及 [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html) 两篇文章。
+
+
+# 八 算法以及逻辑题
+
+#### （一）数组去重
+
+答：[js数组去重的4个方法](http://blog.csdn.net/chengxuyuan20100425/article/details/8497277)
+
+#### （二）集中常见排序
+
+答：我个人比较熟悉冒泡和快排
+
+冒泡：
+
+```
+function bubbleSort(arr){
+    for(var i = 0,len = arr.length;i < len; i++){
+        for (var j = i + 1 ; j < len; j ++){
+            if(arr[i] > arr[j]){
+                var tem = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tem;
+            }
+        }
+    }
+    console.log(arr);
+    return arr;
+} 
+
+bubbleSort([14,11,3,321,22,32,2,3]);
+```
+
+快排：
+
+```
+function quickSort(arr){
+    if(arr.length <= 1){
+        return arr;
+    }
+
+    var resultArr = [];
+    var leftArr = [];
+    var rightArr = [];
+    var centerNum = arr[0];
+
+    for(var i = 1,len = arr.length;i < len ; i++){
+        if( arr[i] < centerNum ){
+            leftArr.push(arr[i]);
+        } else {
+            rightArr.push(arr[i]);
+        }
+    };
+    
+    resultArr = quickSort(leftArr).concat( [centerNum],quickSort(rightArr) );
+    return resultArr;
+}
+    
+quickSort([14,11,3,321,22,32,2,3]);
+```
+
+#### （三）现场出题，并说明时间复杂度。
+
+1. 两个顺序排列的数组A和B，求B数组是否为A数组的子集。（数组内可能有重复数字）。
+2. 写一个函数，把字符串里面的空格全部去掉，并返回删除的空格个数，不许开辟新空间，只能申请简单类型的自动变量。
+……
+
+关于时间复杂度和空间复杂度，请参考这两篇文章：
+
+[算法的时间复杂度和空间复杂度](http://www.cnblogs.com/songQQ/archive/2009/10/20/1587122.html)  [算法的时间复杂度和空间复杂度-总结](http://blog.csdn.net/zolalad/article/details/11848739)
+
+#### （四）现场出逻辑题
+
+1. 一根不均匀的香，从头到尾烧完要一个小时。如何用烧香的方法确定半小时的时间？有两根这样的香，还可以确定哪些时间段。
+2. 有一堆桃子和一群猴子。如果每个猴子分3个桃子，还剩下59个桃子。如果每个猴子分5个桃子，最后一个猴子的桃子不够5个。问几个猴子？几个桃子？
+……
 
